@@ -1,7 +1,7 @@
 # tJNet_julia
 
 Julia implementation of exact-diagonalization and neural-network variational tools
-for finite t-J lattice models.
+for finite t-J lattice models, done as part of MIT 18.337/6.7320 final project.
 
 The repository is organized around two source modules:
 
