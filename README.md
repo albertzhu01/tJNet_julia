@@ -141,25 +141,3 @@ Current files include:
 Large trained model files are not stored in the top-level repository layout
 shown above, but sweep notebooks may create model subdirectories under
 `training_sweep_results/` when model saving is enabled.
-
-## Typical Workflow
-
-1. Include the model and training modules in a Julia session or notebook:
-
-   ```julia
-   include("tJ.jl")
-   include("tJNetRC.jl")
-   ```
-
-2. Build a `TJModels.TJ` model for the desired spin and lattice sector.
-
-3. Assemble Hamiltonian pieces with `TJModels.hamiltonian_by_degree` and
-   `TJModels.assemble_by_degree`.
-
-4. Train with `TJNetRC.trainNN` for full-basis optimization or
-   `TJNetRC.trainNNMC` for Monte Carlo optimization.
-
-5. Use the notebooks to run tests, sweeps, or performance profiling.
-
-For GPU runs on a cluster, request a GPU allocation first and set the training
-parameters to use `"device" => "gpu"` or `"device" => "auto"`.
